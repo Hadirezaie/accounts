@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import af.mcit.accounts.constants.AccountsConstants;
-import af.mcit.accounts.entity.dto.CustomerDto;
-import af.mcit.accounts.entity.dto.ResponseDto;
+import af.mcit.accounts.service.dto.CustomerDto;
+import af.mcit.accounts.service.dto.ResponseDto;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 
