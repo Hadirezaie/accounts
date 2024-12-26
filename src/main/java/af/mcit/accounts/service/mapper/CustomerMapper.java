@@ -1,17 +1,23 @@
 package af.mcit.accounts.service.mapper;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
-
 import af.mcit.accounts.entity.Customer;
 import af.mcit.accounts.service.dto.CustomerDto;
 
-@Mapper(componentModel = "spring")
+// @Mapper(componentModel = "spring")
 public interface CustomerMapper {
-    CustomerMapper INSTANCE = Mappers.getMapper(CustomerMapper.class);
+    // CustomerMapper INSTANCE = Mappers.getMapper(CustomerMapper.class);
 
-    CustomerDto mapCustomerDto(Customer customer);
+    public static CustomerDto mapToCustomerDto(Customer customer, CustomerDto customerDto) {
+        customerDto.setName(customer.getName());
+        customerDto.setEmail(customer.getEmail());
+        customerDto.setMobileNumber(customer.getMobileNumber());
+        return customerDto;
+    }
 
-    Customer mapCustomer(CustomerDto customerDto);
-
+    public static Customer mapToCustomer(CustomerDto customerDto, Customer customer) {
+        customer.setName(customerDto.getName());
+        customer.setEmail(customerDto.getEmail());
+        customer.setMobileNumber(customerDto.getMobileNumber());
+        return customer;
+    }
 }
