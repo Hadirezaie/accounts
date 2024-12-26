@@ -1,4 +1,4 @@
-package af.mcit.accounts.entity.dto;
+package af.mcit.accounts.service.dto;
 
 import lombok.Data;
 
