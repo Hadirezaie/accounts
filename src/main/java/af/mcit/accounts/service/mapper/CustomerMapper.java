@@ -10,8 +10,8 @@ import af.mcit.accounts.service.dto.CustomerDto;
 public interface CustomerMapper {
     CustomerMapper INSTANCE = Mappers.getMapper(CustomerMapper.class);
 
-    CustomerDto mapToAccountsDto(Customer customer);
+    CustomerDto mapCustomerDto(Customer customer);
 
-    Customer mapToAccounts(CustomerDto customerDto);
+    Customer mapCustomer(CustomerDto customerDto);
 
 }
